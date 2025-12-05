@@ -10,17 +10,24 @@ Non è necessario provvedere alla validazione delle email */
 
 const acceptedEmail = ["test@gmail.com", "test2@gmail.com", "test3@gmail.com"];
 let userEmail = prompt("Inserisci la tua email");
+let flag = false;
 
 for (let i = 0; i < acceptedEmail.length; i++) {
   
     if(userEmail === acceptedEmail[i]) {
-        console.log("La tua email è accettata"); 
+        
         i = acceptedEmail.length;
+        flag = true;
     }
+}
 
-    else {
-        console.log("La tua email non è presente");
-    }
+if (flag === true) 
+{
+    console.log("La tua email è accettata"); 
+}
+
+else {
+    console.log("La tua email non è presente");
 }
 
 
